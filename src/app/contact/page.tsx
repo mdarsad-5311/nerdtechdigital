@@ -23,8 +23,8 @@ export default function ContactPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         >
-                            <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground mb-8">
-                                Let&apos;s <span className="text-primary">Talk</span>
+                            <h1 className="text-5xl md:text-7xl font-display font-bold text-black mb-8">
+                                Let&apos;s <span className="text-blue-500">Talk</span>
                             </h1>
                             <p className="text-lg text-muted-foreground leading-relaxed mb-12">
                                 Have a project in mind? We&apos;d love to hear about it. Drop us a message and we&apos;ll get back to you within 24 hours.
@@ -39,9 +39,9 @@ export default function ContactPage() {
                                     <a
                                         key={item.label}
                                         href={item.href}
-                                        className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors"
+                                        className="flex items-center gap-4 text-muted-foreground hover:text-blue-500 transition-colors"
                                     >
-                                        <item.icon className="w-5 h-5 text-primary" />
+                                        <item.icon className="w-5 h-5 text-blue-500" />
                                         <span className="text-sm font-medium">{item.label}</span>
                                     </a>
                                 ))}
@@ -54,44 +54,44 @@ export default function ContactPage() {
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                            className="space-y-6 p-8 rounded-2xl bg-card border border-border"
+                            className="space-y-6 p-8 rounded-2xl bg-gray-100 bg-card border border-gray-200"
                         >
                             <div>
-                                <label className="block text-sm font-medium text-foreground mb-2">Name</label>
+                                <label className="block text-sm font-medium text-black mb-2">Name</label>
                                 <input
                                     type="text"
                                     value={formData.name}
                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                    className="w-full px-4 py-3 rounded-xl bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                                    className="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                                     placeholder="Your name"
                                     required
                                 />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-foreground mb-2">Email</label>
+                                <label className="block text-sm font-medium text-black mb-2">Email</label>
                                 <input
                                     type="email"
                                     value={formData.email}
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                    className="w-full px-4 py-3 rounded-xl bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                                    className="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                                     placeholder="you@company.com"
                                     required
                                 />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-foreground mb-2">Message</label>
+                                <label className="block text-sm font-medium text-black mb-2">Message</label>
                                 <textarea
                                     value={formData.message}
                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                     rows={5}
-                                    className="w-full px-4 py-3 rounded-xl bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
+                                    className="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
                                     placeholder="Tell us about your project..."
                                     required
                                 />
                             </div>
                             <button
                                 type="submit"
-                                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+                                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-blue-500 text-white font-medium hover:bg-blue-400 transition-colors"
                             >
                                 Send Message <Send className="w-4 h-4" />
                             </button>
