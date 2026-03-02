@@ -22,8 +22,8 @@ export default function AboutPage() {
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         className="max-w-3xl"
                     >
-                        <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground mb-8">
-                            Who <span className="text-primary">We Are</span>
+                        <h1 className="text-5xl md:text-7xl font-display font-bold text-black mb-8">
+                            Who <span className="text-blue-500">We Are</span>
                         </h1>
                         <p className="text-xl text-muted-foreground leading-relaxed mb-6">
                             We&apos;re a team of strategists, designers, and marketers who believe that great brands aren&apos;t born — they&apos;re built. With intention, with clarity, and with craft.
@@ -36,16 +36,16 @@ export default function AboutPage() {
             </section>
 
             {/* Values */}
-            <section className="py-24 px-6 bg-card">
+            <section className="py-24 px-6 bg-gray-100 bg-card">
                 <div className="max-w-7xl mx-auto">
                     <motion.h2
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7 }}
-                        className="text-4xl md:text-5xl font-display font-bold text-foreground mb-16"
+                        className="text-4xl md:text-5xl font-display font-bold text-black mb-16"
                     >
-                        Our <span className="text-primary">Values</span>
+                        Our <span className="text-blue-500">Values</span>
                     </motion.h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {values.map((value, i) => (
@@ -55,10 +55,10 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                                className="p-8 rounded-2xl bg-background border border-border"
+                                className="p-8 rounded-2xl bg-white border border-gray-200"
                             >
-                                <value.icon className="w-8 h-8 text-primary mb-6" />
-                                <h3 className="text-lg font-display font-semibold text-foreground mb-3">{value.title}</h3>
+                                <value.icon className="w-8 h-8 text-blue-400 mb-6" />
+                                <h3 className="text-lg font-display font-semibold text-black mb-3">{value.title}</h3>
                                 <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
                             </motion.div>
                         ))}
@@ -84,7 +84,7 @@ export default function AboutPage() {
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
                                 className="text-center"
                             >
-                                <p className="text-4xl md:text-5xl font-display font-bold text-primary mb-2">{stat.number}</p>
+                                <p className="text-4xl md:text-5xl font-display font-bold text-blue-500 mb-2">{stat.number}</p>
                                 <p className="text-sm text-muted-foreground">{stat.label}</p>
                             </motion.div>
                         ))}
